@@ -1,0 +1,75 @@
+.card-product {
+    background: #f8f8f8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 33.4rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .card-product-img {
+        padding-top: 4.5rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        img {
+            width: 21rem;
+            height: 16.8rem;
+        }
+    }
+
+    .card-product-content {
+        padding-left: 2.3rem;
+        height: 11.6rem;
+        h3 {
+            font-size: 2.4rem;
+            font-weight: 300;
+            line-height: 2.9rem;
+        }
+        p {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 2.4rem;
+            color: #cbc9c9;
+        }
+    }
+
+    .card-product-interact {
+        display: flex;
+        align-items: end;
+
+        .card-product-btn {
+            width: 50%;
+            display: flex;
+            font-size: 2.4rem;
+            width: 17.5rem;
+            height: 6.4rem;
+            line-height: 2.9rem;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+
+            &.buy-now {
+                background-color: #9de167;
+                text-decoration: none;
+            }
+
+            &.price {
+                font-weight: 600;
+                background: #dedddc;
+                border: none;
+                cursor: unset;
+            }
+        }
+    }
+
+    .love-btn {
+        position: absolute;
+        background-color: transparent;
+        top: 3rem;
+        right: 2.6rem;
+        width: 4.1rem;
+        height: 4.8rem;
+        border: none;
+    }
+}

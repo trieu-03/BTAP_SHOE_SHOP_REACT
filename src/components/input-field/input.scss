@@ -1,0 +1,56 @@
+.label_form{
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+.input_form{
+    width: 44.3rem;
+    height: 5.4rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background-color: #21212114;
+}
+
+.validate{
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #F50E0E;
+    margin-top: 5px;
+}
+
+.gender_choosen{
+    height: 10.4rem;
+    flex-wrap: wrap;
+    .lable_gender{
+        margin-right: 3rem;
+    };
+}
+.form-check-input{
+    position: unset;
+}
+
+.lable_radio{
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    align-items: center;
+    cursor: pointer;
+    input{
+        opacity: 0;
+    };
+    .design {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        outline-offset: 3px;
+        outline: 3px solid #888888;
+        margin-bottom: 2rem;
+      };
+    input:checked~.design{
+        outline-color: #6200EE;
+        background: #6200EE;
+    };
+};

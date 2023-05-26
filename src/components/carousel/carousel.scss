@@ -1,0 +1,61 @@
+.left_carousel {
+    position: absolute;
+    width: 689px;
+    height: 383px;
+    left: 102px;
+    top: 46px;
+    img {
+        width: 90%;
+        height: 130%;
+    }
+}
+
+.right_carousel {
+    position: absolute;
+    top: 12.4rem;
+    // right: 5.9rem;
+    right: 15.9rem;
+    // width: 29.1rem;
+    width: 30%;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #000000;
+    .prod_name {
+        font-weight: 300;
+        font-size: 4rem;
+    }
+    .prod_des {
+        margin-bottom: 5rem;
+    }
+    .prod_btn {
+        background-color: #f8b653;
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 300;
+        width: 150px;
+        height: 50px;
+        outline: none;
+        border: 1px transparent solid;
+        text-decoration: none;
+        padding: 1.3rem 3.5rem;
+    }
+}
+
+.carousel_contain {
+    position: relative;
+    .prev_btn,
+    .next_btn {
+        position: absolute;
+        z-index: 1;
+        left: 1.8rem;
+        top: 17.5rem;
+        width: 4.5rem;
+        height: 6.6rem;
+        border: none;
+    }
+    .next_btn {
+        left: unset;
+        right: 1.3rem;
+    }
+}
