@@ -1,0 +1,113 @@
+.reg-Container{
+    padding-top:4.8rem;
+    width: 80%;
+    margin: auto;
+
+    .reg-Header{
+        font-weight: 40rem;
+        font-size: 4rem;
+        width: 156px;
+        height: 48px;
+    }
+
+    hr{ 
+        margin:4.2rem 0;
+    }
+
+  
+
+    .submit{ 
+        background: #6200EE;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color:  rgba(255, 255, 255, 1);
+        padding: 1.6rem 2.5rem;
+    
+    }
+
+
+
+    .reg-Form{
+        
+        .reg-Frame, .reg-Gender{
+            height: 10rem;
+            h2{
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                color: rgba(0, 0, 0, 0.6);
+    
+            }
+        }
+        
+        .reg-Gender{
+            p{
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+
+            .reg-Circle{
+                background: rgba(98, 0, 238, 0.04);
+                height: 4rem;
+                width: 4rem;
+                border-radius: 100%;
+
+                input{
+                    
+                    margin-top: 0.9rem;
+                    height: 2rem;
+                    width: 2rem;
+                    accent-color: rgba(98, 0, 238);
+                }
+            }
+
+           
+        }
+
+
+        .reg-Frame{
+            input{
+                width: 100%;
+                padding: 1.6rem 1.2rem 1.4rem 1.4rem;
+                background: rgba(33, 33, 33, 0.08);
+                border-radius: 0.4rem 0.4rem 0rem 0rem;
+                border: none;
+            }
+    
+            .reg-Error{
+                color: #F50E0E;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+
+            
+            .reg-Pass{
+                position: relative;
+                
+
+                .reg-Img {
+                    position: absolute;
+                    top: 25%;
+                    right: 1rem;
+                    border: white;
+                    background: none;
+
+                    img{ 
+                        width: 20px;
+                    }
+                }
+                
+            }
+
+            
+           
+        }
+
+       
+        
+    }
+}
+
