@@ -38,6 +38,7 @@ function CarouselOponent() {
               <div className="right_carousel">
                 <p className='prod_name'>{product.name}</p>
                 <p className='prod_des'>{product.description}</p>
+                {/* <button className='prod_btn'>Buy now</button> */}
                 <NavLink className='prod_btn' to={`/detail/` + product.id}>Buy now</NavLink>
               </div>
             </div>

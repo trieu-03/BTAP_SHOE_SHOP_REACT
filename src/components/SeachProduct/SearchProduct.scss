@@ -1,0 +1,82 @@
+.search-result {
+    margin-bottom: 4.4rem;
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.135px;
+        color: rgba(0, 0, 0, 0.6);
+        margin-left: 10.4rem;
+        margin-top: 2.7rem;
+        margin-bottom: 0.5rem;
+    }
+    .input-filter {
+        margin-left: 9.8rem;
+        height: 54px;
+    }
+
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        height: 54px;
+        display: flex;
+        align-items: center;
+
+        padding: 16px 12px 14px 14px;
+        width: 44.3rem;
+        height: 5.4rem;
+        background: rgba(33, 33, 33, 0.08);
+        border: none;
+        outline: none;
+        border-radius: 0;
+    }
+
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 2.4rem;
+        letter-spacing: 0.15px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .ant-select .ant-select-arrow {
+        margin-right: 20px;
+        margin-top: -5px;
+    }
+
+    .ant-select-item-option {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        width: 100%;
+    }
+    .rc-virtual-list-holder-inner {
+        padding: 16px 12px 14px 14px;
+        width: 44.3rem;
+        height: 5.4rem;
+        background: rgba(33, 33, 33, 0.08);
+        border: none;
+        outline: none;
+        border-radius: 0;
+    }
+}
+
+.ant-select-dropdown {
+    padding: 0;
+}
+
+.ant-select-dropdown .ant-select-item {
+    height: 54px;
+    display: flex;
+    align-items: center;
+
+    padding: 16px 12px 14px 14px;
+    width: 44.3rem;
+    height: 5.4rem;
+    background: rgba(33, 33, 33, 0.08);
+    border: none;
+    outline: none;
+    border-radius: 0;
+    &:hover {
+        background: rgba(141, 195, 237, 0.807);
+    }
+}
