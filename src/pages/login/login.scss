@@ -1,0 +1,130 @@
+.log-Container{ 
+    padding-top:4.8rem;
+    width: 80%;
+    margin: auto;
+
+    .log-Header{ 
+        font-weight: 40rem;
+        font-size: 4rem;
+        width: 156px;
+        height: 48px;
+    }
+
+    hr{ 
+        margin:4.2rem 0;
+    }
+
+    .submit{ 
+        background: #6200EE;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color:  rgba(255, 255, 255, 1);
+        padding: 1.3rem 4rem;
+    }
+
+    .log_to_reg{ 
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 0.14px;
+        color: rgba(21, 42, 235, 0.8);
+    }
+
+    .log-Fb{
+        background-color: #1877F2;
+        box-shadow: 0px 38.4869px 71.4756px rgba(0, 0, 0, 0.07);
+        border-radius: 20px;
+        padding: 1rem 0;
+        color: white;
+        font-weight: 400;
+        font-size: 2rem;
+        width: 100%;
+        transition: all 0.5s;
+        position: relative;
+
+        &:hover{
+            background-color: #166bda;
+        }
+
+        img{ 
+            position: absolute;
+            padding: 1rem 0;
+            width: 3rem;
+            left: 10%;
+            top: 0px;
+        }
+        
+    }
+
+
+
+    .log-Form {
+        width: 40%;
+
+        .log-Frame{
+            height: 10rem;
+            margin: 1.5rem 0;
+            input{
+                width: 100%;
+                padding: 1.6rem 1.2rem 1.4rem 1.4rem;
+                background: rgba(33, 33, 33, 0.08);
+                border-radius: 0.4rem 0.4rem 0rem 0rem;
+                border: none;
+            }
+
+            .log-Error{
+                color: #F50E0E;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+
+            
+            .log-Pass{
+                position: relative;
+                
+
+                .log-Img {
+                    position: absolute;
+                    top: 25%;
+                    right: 1rem;
+                    border: white;
+                    background: none;
+
+                    img{ 
+                        width: 20px;
+                    }
+                }
+                
+            }
+
+            
+        
+        }
+    }
+
+    @media (max-width: 1000px) { 
+        .log-Form{
+            width: 80%;
+        }
+
+        .log-Fb{
+            font-size: 1.6rem;
+            img{ 
+                width: 2.5rem;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .log-Fb{
+            img{ 
+                left: 3%;
+            }
+        }
+    }
+
+}
+
+
