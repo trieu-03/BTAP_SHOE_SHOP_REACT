@@ -3,19 +3,19 @@ import './CardProduct.scss';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 //assets
-import heartFull from "/src/assets/icons/heartFull.svg";
-import heartBorder from "/src/assets/icons/heartBoder.svg";
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { ACCESS_TOKEN } from '../../constant';
+import { getLocalStorage } from '../../utils';
+import heartBorder from "/src/assets/icons/heartBoder.svg";
+import heartFull from "/src/assets/icons/heartFull.svg";
 //---------------------------------------------------------------------------------
-const ACCESS_TOKEN = 'eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ1bkBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJWSUVXX1BST0ZJTEUiLCJuYmYiOjE2ODYzMTc5NDgsImV4cCI6MTY4NjMyMTU0OH0.hjJHI6i6_0xDRsCDGZwDlyAWe20E2-oJNLNAN316HWo';
 
 function CardProduct(props) {
     const { product, listFavor, setChange, change} = props;
     const [isFavor, setIsFavor] = useState(false);
     const [imgSrc, setImgSrc] = useState(heartBorder)
-    // const {favoriteList } = useSelector((state) => state.userReduxSlides);
-    const favoriteList = [];
+    const {favoriteList } = useSelector((state) => state.UserReducer);
     useEffect(() => {
         if (listFavor?.find((favorite) => favorite.id === product.id)) {
             setIsFavor(true);
@@ -41,7 +41,7 @@ function CardProduct(props) {
                 method: 'get',
                 url: link,
                 headers: {
-                    Authorization: `Bearer ${ACCESS_TOKEN}`
+                    Authorization: `Bearer ${getLocalStorage(ACCESS_TOKEN)}`
                 }
             });
             await setChange(!change);

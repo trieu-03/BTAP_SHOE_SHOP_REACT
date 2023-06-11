@@ -6,9 +6,10 @@ import { useSelector } from 'react-redux';
 import CardProduct from '../CardProduct/CardProduct'
 import axios from 'axios';
 import { useState } from 'react';
+import { getLocalStorage } from '../../utils';
+import { ACCESS_TOKEN } from '../../constant';
 
 //---------------------------------------------------------------------------------
-const ACCESS_TOKEN = 'eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ1bkBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJWSUVXX1BST0ZJTEUiLCJuYmYiOjE2ODYzMTc5NDgsImV4cCI6MTY4NjMyMTU0OH0.hjJHI6i6_0xDRsCDGZwDlyAWe20E2-oJNLNAN316HWo';
 
 function ListItem(props) {
   const { option, listProductOption } = props;
@@ -22,7 +23,7 @@ function ListItem(props) {
         method: 'get',
         url: 'https://shop.cyberlearn.vn/api/Users/getproductfavorite',
         headers: {
-          Authorization: `Bearer ${ACCESS_TOKEN}`
+          Authorization: `Bearer ${getLocalStorage(ACCESS_TOKEN)}`
         }
       });
       setListFavor(resp.data.content.productsFavorite)
