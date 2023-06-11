@@ -2,10 +2,11 @@ import React from 'react'
 import DetailProdTable from './DetailProdTable'
 import './tableFormat.scss'
 function ProdTable(props) {
+    const {orderDetail, date} = props.item;
   return (
     <>
         <div className="prod_table">
-            <p className='status_table'>+ Orders have been placed on 09 - 19 - 2020</p>
+            <p className='status_table'>{`+ Orders have been placed on ${date}`}</p>
             <table>
                 <thead>
                     <tr className='table-row'>
@@ -18,24 +19,12 @@ function ProdTable(props) {
                     </tr>
                 </thead>
                 <tbody>
-                <DetailProdTable/>
+                    {orderDetail.map((item,index)=>{
+                    return <DetailProdTable key={index} shoe={item}/>
+                    })}
                 </tbody>
             </table>
-            <div className="page_number">
-                <div className="page_number_wrapper">
-                    <div className="square">
-                        <img src="/src/assets/icons/arrowLeft.svg" alt="..." />
-                    </div>
-                    <div className="square">2</div>
-                    <div className="square">3</div>
-                    <div className="square">...</div>
-                    <div className="square">9</div>
-                    <div className="square">10</div>
-                    <div className="square">
-                        <img src="src/assets/icons/arrowRight.svg" alt="..." />
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </>
   )

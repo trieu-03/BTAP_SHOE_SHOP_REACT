@@ -1,0 +1,166 @@
+.table {
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 7.1rem;
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #6200ee;
+        border-color: #6200ee;
+    }
+    .ant-checkbox-inner {
+        margin: 0;
+        &:after{
+            background-color: #6200ee;
+        }
+    }
+
+    .ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+        .ant-checkbox-checked:not(.ant-checkbox-disabled)
+        .ant-checkbox-inner {
+        background-color: #5902aa;
+    }
+
+    .ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+        .ant-checkbox-checked:not(.ant-checkbox-disabled):after {
+        border-color: #5902aa;
+    }
+    
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+        border-color: #6200ee !important;
+    }
+
+    thead {
+        background: #d9d9d9;
+        width: 1199px;
+        th {
+            padding: 18.92px 0;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 2.42rem;
+            color: #000000;
+        }
+
+        .ant-table-selection-column {
+            width: 2rem;
+        }
+    }
+
+    tbody {
+        td {
+            padding: 18.92px 0;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 2.42rem;
+            color: #000000;
+
+            img {
+                width: 8.5rem;
+                height: 5.6rem;
+            }
+
+            .btn-quantity {
+                background: #6200ee;
+                color: #fff;
+                letter-spacing: 0.125rem;
+                border: none;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                width: 3.9rem;
+                height: 3.1rem;
+                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
+                    0px 5px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #30066b;
+                    font-weight: 600;
+                }
+            }
+            .inputCount {
+                border-radius: 0;
+                background: #d9d9d9;
+                .ant-input-number-input {
+                    text-align: center;
+                }
+            }
+            .ant-input-number-handler-wrap {
+                visibility: hidden;
+            }
+
+            span {
+                margin: 0 2.1rem;
+            }
+
+            .btn-edit {
+                width: 8rem;
+                height: 3.6rem;
+                background: #6200ee;
+                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
+                    0px 5px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                border: none;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: #fff;
+                align-items: center;
+                letter-spacing: 1.25px;
+                margin-right: 1.3rem;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #30066b;
+                    font-weight: 600;
+                }
+            }
+
+            .btn-delete {
+                width: 10rem;
+                height: 3.6rem;
+                background: #eb5757;
+                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
+                    0px 5px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                border: none;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: #fff;
+                align-items: center;
+                letter-spacing: 1.25px;
+                margin-left: 1.3rem;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #6f1b1b;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.submit-order {
+    width: 15.2rem;
+    height: 4rem;
+    background: #f2994a;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    border: none;
+    margin-right: 13rem;
+    color: #ffffff;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #964d0d;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,104 @@
+.detail-product {
+    margin: 0 6.4rem;
+    display: flex;
+    justify-content: space-around;
+    .detail-product-left {
+        margin-top: 5.8rem;
+        max-width: 334px;
+        min-height: 355px;
+        background-color: #f8f8f8;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .detail-product-right {
+        margin-left: 12.9rem;
+        padding: 0;
+        margin-top: 6.5rem;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 3.361rem;
+        }
+
+        p {
+            font-weight: 400;
+            line-height: 1.936rem;
+            max-width: 600px;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            margin-bottom: 1.5rem;
+            color: #1ed90e;
+        }
+
+        .btn-size {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            color: #1e1d1d;
+            background: #cccccc;
+            width: 5rem;
+            height: 5rem;
+            margin-right: 2.1rem;
+            border: none;
+        }
+
+        .detail-price {
+            display: block;
+            width: 11.3rem;
+            height: 4.7rem;
+            font-weight: 600;
+            font-size: 3rem;
+            line-height: 3.6rem;
+            margin: 1.7rem 0 0.6rem;
+
+            color: #fc0303;
+        }
+
+        .btn-quantity {
+            width: 5rem;
+            height: 5rem;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            border: none;
+
+            color: #fffcfc;
+            background: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+        }
+
+        span {
+            margin: 0 2rem;
+            font-size: 3rem;
+            line-height: 3.6rem;
+
+            color: #000000;
+        }
+
+        .add-cart {
+            width: 17.5rem;
+            height: 6.4rem;
+            background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            margin-top: 1rem;
+            border: none;
+            color: #fff8f8;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+}

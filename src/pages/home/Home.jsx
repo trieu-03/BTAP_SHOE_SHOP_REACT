@@ -18,10 +18,10 @@ function Home() {
     const resp = await axios.get('https://shop.cyberlearn.vn/api/Product');
 
     const action = setListProduct(resp.data.content)
-    console.log(action)
+   
     dispatch(action);
   }
-
+  
   useEffect(() => {
     getListProduct()
   }, [])

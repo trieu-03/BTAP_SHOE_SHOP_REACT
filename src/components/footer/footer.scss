@@ -1,7 +1,11 @@
 .footer-wrapper{
-    background: linear-gradient(359deg, #63ca6a 0%, #109eca 99.53%);
+    background-color: #fff;
     margin-top: 8rem;
     padding: 5.3rem 0 3.6rem 10rem;
+    .col-border{
+        border-right: 0.5px solid black;
+        border-left: 0.5px solid black;
+    }
 }
 .footer-title{
     font-weight: 700;
@@ -24,8 +28,6 @@
 }
 .footer-content-betweenPosition{
     padding-left: 6.7rem;
-    border-right: 0.5px solid black;
-    border-left: 0.5px solid black;
 }
 .sub-footer{
     display: flex;
@@ -39,5 +41,53 @@
         font-size: 2rem;
         line-height: 2.4rem;
         margin: 0;
+    }
+}
+//--------------RESPONSIVE-----------------------------
+@media screen and (max-width: 1024px) {
+    .footer-wrapper{
+        .footer-content-betweenPosition{
+            padding-left: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-wrapper{
+        padding: 5.3rem 0 3.6rem 5.3rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer-wrapper{
+        padding: 5.3rem 0 3.6rem 0;
+        .footer-title{
+            font-size: 1.5rem;
+        };
+        .footer-content{
+            margin-left: 3.2rem;
+            ul{
+                li{
+                    a{
+                        font-weight: 500;
+                        line-height: 1.9rem;
+                    }
+                }
+            }
+        }
+    }
+    .sub-footer{
+        height: 4.4rem;
+        p{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .sub-footer{
+        p{
+            font-size: 1rem;
+        }
     }
 }

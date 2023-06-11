@@ -48,27 +48,22 @@
         }
     }
 }
-
-.page_number{
-    .page_number_wrapper{
-        display: flex;
-        justify-content: flex-end;
-        gap: 0.8rem;
-        .square{
-            width: 3.2rem;
-            height: 3.2rem;
-            border-radius: 4px;
-            border: 1px solid #DFE3E8;
-            text-align: center;
-            line-height: 3.2rem;
-            font-weight: 700;
-            font-size: 1.4rem;
-            img{
-                margin-bottom: 0.5rem;
-            }
-        }
-        .square:nth-child(1){
-            background: #919EAB;
-        }
+//------------------RESPONSIVE-------------------
+@media screen and (max-width: 768px) {
+    .prod_table{
+        padding-left: unset;
     }
+    .status_table {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 576.98px) {
+    .prod_table{
+        td{
+            font-size: 1.6rem;
+        }
+        .status_table{
+            font-size: 1.4rem;
+        }
+    }   
 }
