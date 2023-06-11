@@ -1,9 +1,29 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Logo from '/src/assets/icons/logo';
 import SearchIcon from '/src/assets/icons/SearchIcon'
 import './header.scss'
+import { deleteKey } from '../../utils';
+import { resetUserProfile } from '../../redux/redux-user/User';
+import { useDispatch, useSelector } from 'react-redux';
+import { ACCESS_TOKEN } from '../../constant';
 function Header() {
+    const navigate = useNavigate()
+    const {userProfile} = useSelector((state) => state.UserReducer);
+    const dispatch = useDispatch()
+
+    const handleLogout = () => { 
+        //chuyển về trang login
+        navigate("/login")
+        //xóa localstorage
+        deleteKey(ACCESS_TOKEN)
+        //reset userLogin ở trên Redux
+        const action = resetUserProfile()
+        dispatch(action)
+    
+        //call api logout
+    
+      }
   return (
     <>
     
@@ -31,12 +51,19 @@ function Header() {
                         </div>
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to={'/register'}>Register</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={'/login'}>Login</NavLink>
-                    </li>
+                    {
+                        userProfile.email ? (
+                    <>
+                        <li><p style={{color:"white"}}>{userProfile.email}</p></li>
+                        <li><button onClick={() => {handleLogout()}}>Logout</button></li>
+                    </>
+                    )
+                    : (
+                    <>
+                        <li><NavLink to={"/register"}>Register</NavLink></li>
+                        <li><NavLink to={"/login"}>Login</NavLink></li>
+                    </>)
+                    }   
                 </ul>
            </div>
             </header>

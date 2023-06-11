@@ -13,6 +13,7 @@ import "./login.scss"
 
 
 
+
 const schemaLogin = Yup.object({
 	email: Yup.string().email().required('Email is required'),
 	password: Yup.string()
@@ -26,6 +27,10 @@ function Login() {
 	const [hide, setHide] = useState(false)
  	const navigate = useNavigate();
 
+	const responseFacebook = (response) => { 
+		console.log(response)
+	}
+
 	const formik = useFormik({
 		initialValues: {
 			email: '',
@@ -36,7 +41,6 @@ function Login() {
 
 		onSubmit: async (values) => {
 			try {
-				console.log({ values });
 				const resp = await axios.post(
 					'https://shop.cyberlearn.vn/api/Users/signin',
 					{
@@ -44,8 +48,6 @@ function Login() {
 						email: values.email,
 					}
 				);
-				console.log({ resp });
-
 				saveLocalStorage(ACCESS_TOKEN, resp.data.content.accessToken);
 
 				navigate('/profile');
@@ -101,10 +103,14 @@ function Login() {
 				<button className='submit ml-5' type='submit'>Submit</button>
 			</div>
 
-			<button type='button' className='log-Fb mt-3'>
+			<button className="log-Fb mt-3" type='button'>
 				<img className='log-fbIcon' src={fbIcon} alt="" />
 				Continue with Facebook
 			</button>
+
+	
+			
+			
 		</div>
 
       </div>
