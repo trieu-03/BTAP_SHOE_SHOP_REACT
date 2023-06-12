@@ -24,14 +24,13 @@ const schemaRegister = Yup.object({
         .required('Phone is required')
         .typeError('Phone must be number')
         .positive('Phone input is inappropriate'),
-
 });
 
 
 
 function Profile() {
     const [hide, setHide] = useState("")
-    const { userProfile } = useSelector((state) => state.UserReducer);
+    const {userProfile} = useSelector((state) => state.UserReducer);
     const [gender, setGender] = useState(userProfile.gender)
     const [proMenu, setproMenu] = useState(true)
 	const dispatch = useDispatch();
@@ -39,18 +38,15 @@ function Profile() {
 	useEffect(() =>  {
 		const actionThunk = getProfileThunk();
 		dispatch(actionThunk);
-        console.log(userProfile)
-	}, []);
-
-    
+	}, []);    
 
     const formik = useFormik({
         initialValues: { 
-            email: userProfile.email,
-            name: userProfile.name,
+            email: "_",
+            name: "_",
             password: "",
-            phone: userProfile.phone,
-            gender: userProfile.gender
+            phone: "_",
+            gender: "_"
         },
 
         validationSchema: schemaRegister, 
@@ -64,6 +60,7 @@ function Profile() {
 
             const actionThunk = updateProfileThunk(newValue);
             dispatch(actionThunk)
+            console.log(userProfile)
 
             alert("Update thành công")
           } catch (err) {
@@ -97,6 +94,7 @@ function Profile() {
                                     name='email'
                                     placeholder='email'
                                     {...formik.getFieldProps('email')}
+                                    value = {formik.values.email === "_" ? userProfile.email : formik.values.email}
                                 />
 
                                 {formik.errors.email && formik.touched.email && (
@@ -111,6 +109,7 @@ function Profile() {
                                 name='phone' 
                                 placeholder='phone'
                                 {...formik.getFieldProps("phone")}
+                                value = {formik.values.phone === "_" ? userProfile.phone : formik.values.phone}
                                 />
                                 {formik.errors.phone && formik.touched.phone && (
                                     <p className='pro-Error'>{formik.errors.phone}</p>
@@ -128,6 +127,7 @@ function Profile() {
                                 name='name' 
                                 placeholder='name'
                                 {...formik.getFieldProps("name")}
+                                value = {formik.values.name === "_" ? userProfile.name : formik.values.name}
                                 />
 
                                 {formik.errors.name && formik.touched.name && (

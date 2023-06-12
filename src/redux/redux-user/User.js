@@ -20,18 +20,23 @@ export const getProfileThunk = createAsyncThunk(
 export const updateProfileThunk = createAsyncThunk(
 	'UserSlice/updateProfileThunk',
 	async (user) => { 
-		console.log(user.newValue)
-		const resp = await axiosWithAuth.post('/Users/updateProfile'
-		,
-		{
-			email: user.email,
-			password: user.password,
-			name: user.name,
-			gender: user.gender,
-			phone: user.phone,
+		try{
+			const resp = await axiosWithAuth.post('/Users/updateProfile'
+			,
+			{
+				email: user.email,
+				password: user.password,
+				name: user.name,
+				gender: user.gender,
+				phone: user.phone,
+			}
+			);
+			return resp;
+
+		} catch(err) {
+			console.log(err)
 		}
-		);
-		return resp;
+
 	}
 );
 
@@ -48,8 +53,15 @@ const UserSlice = createSlice({
 		builder.addCase(getProfileThunk.fulfilled, (state, action) => {
 			state.userProfile = action.payload.data.content;
 		});
+
 		builder.addCase(updateProfileThunk.fulfilled, (state, action) => { 
-			state.userProfile = action.payload.data.content;
+			const newData = action.payload.config.data;
+			state.userProfile = {
+				...state.userProfile,
+				newData
+			}
+			
+			
 		}); 
 	},
 });
