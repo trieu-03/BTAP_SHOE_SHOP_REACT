@@ -4,7 +4,8 @@ import { Carousel } from 'antd';
 import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-
+import prev from '/src/assets/icons/prev.svg';
+import next from '/src/assets/icons/next.svg';
 //-------------------------------------------------------------------------
 
 const contentStyle = {
@@ -26,7 +27,7 @@ function CarouselOponent() {
   return (
     <div className='carousel_contain'>
       <button className='prev_btn' onClick={() => { carouRef.current.prev() }}>
-        <img src="/src/assets/icons/prev.svg" alt="..." />
+        <img src={prev} alt="..." />
       </button>
       <Carousel autoplay autoplaySpeed={3000} effect='fade' ref={carouRef}>
         {listFilterByFeature?.map((product, index) =>
@@ -46,7 +47,7 @@ function CarouselOponent() {
         )}
       </Carousel>
       <button className='next_btn' onClick={() => { carouRef.current.next() }}>
-        <img src="/src/assets/icons/next.svg" alt="..." />
+        <img src={next} alt="..." />
       </button>
     </div>
   )
