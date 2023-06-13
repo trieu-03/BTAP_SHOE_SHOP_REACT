@@ -10,7 +10,8 @@ import { ACCESS_TOKEN } from '../../constant';
 import { deleteKey, getLocalStorage } from '../../utils';
 import './header.scss';
 
-
+import searchIcon from '/src/assets/icons/searchIcon.svg';
+import cartIcon from '/src/assets/icons/cartIcon.svg';
 //======================================================
 function Header() {
     const navigate = useNavigate()
@@ -42,7 +43,7 @@ function Header() {
                         <li>
                             <NavLink to={'/search'}>
                                 <div className="li_wrapper">
-                                    <img src="/src/assets/icons/searchIcon.svg" alt="..." />
+                                    <img src={searchIcon} alt="..." />
                                     <p>Search</p>
                                 </div>
                             </NavLink>
@@ -50,7 +51,7 @@ function Header() {
                         <li>
                             <NavLink to={'/cart'}>
                                 <div className="li_wrapper">
-                                    <img src="/src/assets/icons/cartIcon.svg" alt="..." />
+                                    <img src={cartIcon} alt="..." />
                                     <p>({cartList.length})</p>
                                 </div>
                             </NavLink>
