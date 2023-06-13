@@ -25,7 +25,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='' element={<HomePlate />}>
+        <Route path='/shoeshop' element={<HomePlate />}>
           <Route index element={<Home />}></Route>
           <Route path='login' element={<Login />}></Route>
           <Route path='profile' element={<Profile />}></Route>
