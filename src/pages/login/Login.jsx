@@ -99,7 +99,7 @@ function Login() {
             </div>
 
 			<div className='d-flex justify-content-end align-items-center mt-4'>
-				<a className='log_to_reg mr-4' href=""><p>Register Now ?</p></a>
+				<a className='log_to_reg mr-4' href="" onClick={() => {navigate("/register")}}><p>Register Now ?</p></a>
 				<button className='submit ml-5' type='submit'>Submit</button>
 			</div>
 

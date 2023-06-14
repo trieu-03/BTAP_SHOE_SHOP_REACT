@@ -17,11 +17,14 @@ import { changeCount, removeProdCart, setHistoryOrder } from '/src/redux/redux-s
 
 const TableCart = () => {
   const dispatch = useDispatch();
-  // const { profileData } = useSelector((state) => state.userReduxSlides)
+  const { userProfile } = useSelector((state) => state.UserReducer)
   const profileData = {
-    email: 'un@gmail.com'
+    email: userProfile.email
   }
+  
   const { cartList } = useSelector(state => state.productReducer);
+
+  
   const [listOrder, setListOrder] = useState([]);
   const [isEdit, setIsEdit] = useState(false);
 
